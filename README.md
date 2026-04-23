@@ -1,36 +1,170 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏌️‍♂️ Golf Reward & Charity Platform
 
-## Getting Started
+A full-stack web application that combines **golf performance tracking**, **monthly reward draws**, and **charity contributions** into a single engaging platform.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Live Demo
+
+🔗 https://your-vercel-link.vercel.app
+
+---
+
+## 📌 Overview
+
+This platform allows users to:
+
+* Subscribe to access premium features
+* Track their latest golf scores (Stableford format)
+* Participate in monthly draw-based rewards
+* Contribute a portion of their subscription to charity
+
+The system focuses on **real-world usability**, **clean UX**, and **functional backend logic**.
+
+---
+
+## ✨ Core Features
+
+### 🔐 Authentication & User System
+
+* Secure login/signup using Supabase
+* Protected dashboard access
+
+### 💳 Subscription System (Simulated)
+
+* Monthly & yearly plans
+* Subscription activation logic
+* Renewal date tracking
+* Feature access control
+
+> Note: Payment is simulated due to sandbox limitations.
+
+---
+
+### ⛳ Score Management (Rolling 5 System)
+
+* Users can enter golf scores (1–45 range)
+* Only latest 5 scores retained
+* Oldest score automatically replaced
+* Duplicate date entries prevented
+
+---
+
+### 🎲 Draw Engine
+
+* Generate monthly draw (5 random numbers)
+* Stored in database
+* Prize pool dynamically calculated based on subscribers
+
+---
+
+### 🏆 Winnings System
+
+* Matches user scores with draw results
+* Displays:
+
+  * 3 Match → Entry Tier
+  * 4 Match → High Tier
+  * 5 Match → Jackpot
+* Real-time result evaluation
+
+---
+
+### ❤️ Charity Integration
+
+* Users select a charity
+* Percentage of subscription contributes to charity
+* Displayed on dashboard
+
+---
+
+## 🧱 Tech Stack
+
+* **Frontend:** Next.js (App Router), React
+* **Backend:** Supabase (Database + Auth)
+* **Styling:** Tailwind CSS
+* **Animations:** Framer Motion
+* **Deployment:** Vercel
+
+---
+
+## 📂 Project Structure
+
+```
+/app
+  /dashboard
+  /draws
+  /winnings
+  /subscribe
+/components
+  ScoreEntry.tsx
+/utils
+  supabase.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Setup Instructions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone repository:
 
-## Learn More
+```bash
+git clone https://github.com/your-username/golf-platform.git
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Run development server:
 
-## Deploy on Vercel
+```bash
+npm run dev -- --webpack
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Configure environment variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+NEXT_PUBLIC_SUPABASE_URL=your_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
+```
+
+---
+
+## 🧠 Key Highlights
+
+* Focused on **complete system flow**, not just UI
+* Implemented **data integrity logic** (rolling scores, validation)
+* Designed for **scalability and real-world use cases**
+* Clean, modern, non-traditional UI
+
+---
+
+## ⚠️ Limitations
+
+* Payment system is simulated (no real gateway integration)
+* Admin panel is not fully separated (core logic implemented)
+
+---
+
+## 📈 Future Improvements
+
+* Full payment integration (Stripe / Razorpay)
+* Dedicated admin dashboard
+* Automated monthly draw scheduler
+* Email notifications system
+
+---
+
+## 👤 Author
+
+**Trushant Rathod**
+📧 [trushantrathod@gmail.com](mailto:trushantrathod@gmail.com)
+
+---
+
+## 📄 License
+
+This project is created for educational and evaluation purposes.
