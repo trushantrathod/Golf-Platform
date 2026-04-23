@@ -35,7 +35,8 @@ export default function ScoreEntry({ userId, onScoreAdded }: ScoreEntryProps) {
         .from('scores')
         .select('id')
         .eq('user_id', currentUserId)
-        .eq('created_at', date)
+        .gte('created_at', date + 'T00:00:00')
+        .lt('created_at', date + 'T23:59:59')
         .maybeSingle();
 
       if (existingDateEntry) {
