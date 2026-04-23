@@ -124,7 +124,7 @@ export default function SignupPage() {
 
         <p className="mt-8 text-center text-slate-600 text-[9px] font-black uppercase tracking-widest leading-loose">
           By signing up, you agree to participate in <br /> 
-          monthly draw-based prize pools[cite: 12].
+          monthly draw-based prize pools.
         </p>
       </motion.div>
     </div>
