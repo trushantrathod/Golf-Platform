@@ -6,7 +6,7 @@ A full-stack web application that combines **golf performance tracking**, **mont
 
 ## 🚀 Live Demo
 
-🔗 https://your-vercel-link.vercel.app
+🔗 https://your-vercel-link.vercel.app](https://golf-platform-2.vercel.app/
 
 ---
 
